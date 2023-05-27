@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="20dp"
+tools:context=".SignUpActivity">
+
+        <RelativeLayout
+            android:id="@+id/form_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSignUpSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/sign_up"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/tvFirstWarningSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvSignUpSignUp"
+                android:text="@string/this_information_is_required"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tvSecondWarningSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvFirstWarningSignUp"
+                android:text="@string/full_address_information_must_be_provided_or_none"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tvProfilePhotoSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvSecondWarningSignUp"
+                android:text="@string/profile_photo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/ivProfilePhotoSignUp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvProfilePhotoSignUp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_person_plus_dark"
+                android:contentDescription="@string/photo_of_the_profile" />
+
+            <TextView
+                android:id="@+id/tvNameSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/ivProfilePhotoSignUp"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNameSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvNameSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_john_novak_novakphoto"
+                    android:id="@+id/tietNameSignUp"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:inputType="textCapWords|textPersonName"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvEmailSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilNameSignUp"
+                android:text="@string/email2"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmailSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvEmailSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_john_example_com"
+                    android:id="@+id/tietEmailSignUp"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvPassword1SignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilEmailSignUp"
+                android:text="@string/password2"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword1SignUp"
+                android:layout_below="@id/tvPassword1SignUp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietPassword1SignUp"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:hint="@string/six_stars"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvPassword2SignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilPassword1SignUp"
+                android:text="@string/confirm_password"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword2SignUp"
+                android:layout_below="@id/tvPassword2SignUp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietPassword2SignUp"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:hint="@string/six_stars"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvChangePasswordSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilPassword2SignUp"
+                android:text="@string/if_you_don_t_want_to_change_your_password_leave_password_fields_empty"
+                android:visibility="gone"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tvStudioSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvChangePasswordSignUp"
+                android:text="@string/studio"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_marginTop="50dp"/>
+
+            <TextView
+                android:id="@+id/tvAddressNameSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvStudioSignUp"
+                android:text="@string/address_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddressNameSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvAddressNameSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_john_novak_novakphoto"
+                    android:id="@+id/tietAddressNameSignUp"
+                    android:inputType="textCapWords|textPersonName"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvAddressSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilAddressNameSignUp"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAddressSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvAddressSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_long_street_23"
+                    android:id="@+id/tietAddressSignUp"
+                    android:inputType="textCapSentences"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvZipCodeSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilAddressSignUp"
+                android:text="@string/zip_code"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilZipCodeSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvZipCodeSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_55_080"
+                    android:id="@+id/tietZipCodeSignUp"
+                    android:inputType="textCapSentences"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvTownSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilZipCodeSignUp"
+                android:text="@string/town"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTownSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvTownSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_warsaw"
+                    android:id="@+id/tietTownSignUp"
+                    android:inputType="textCapSentences"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvContactSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilTownSignUp"
+                android:text="@string/contact"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_marginTop="50dp"/>
+
+            <TextView
+                android:id="@+id/tvContactEmailSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tvContactSignUp"
+                android:text="@string/contact_email"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilContactEmailSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvContactEmailSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_john_example_com"
+                    android:id="@+id/tietContactEmailSignUp"
+                    android:inputType="textEmailAddress"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvTelephoneNumberSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilContactEmailSignUp"
+                android:text="@string/telephone_number"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTelephoneNumberSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvTelephoneNumberSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/e_g_123456789"
+                    android:id="@+id/tietTelephoneNumberSignUp"
+                    android:inputType="numberDecimal"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvAccountsDescriptionSignUp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tilTelephoneNumberSignUp"
+                android:text="@string/account_s_description"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_marginTop="50dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAccountsDescriptionSignUp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvAccountsDescriptionSignUp"
+                app:boxStrokeColor="@color/green_dark"
+                app:hintTextColor="@color/green_dark"
+                app:boxBackgroundColor="@color/gray_light">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/hi_i_m_mark"
+                    android:id="@+id/tietAccountsDescriptionSignUp"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignUpSignUp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tilAccountsDescriptionSignUp"
+                android:text="@string/sign_up"
+                app:backgroundTint="@color/green_dark"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+</ScrollView>

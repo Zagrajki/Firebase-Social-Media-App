@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="20dp"
+android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:text="@string/pick_a_source_of_the_photo"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivCameraCameraOrGallery"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_camera_plus_dark"
+            android:contentDescription="@string/camera" />
+
+        <ImageView
+            android:id="@+id/ivGalleryCameraOrGallery"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_gallery_plus_dark"
+            android:contentDescription="@string/gallery" />
+
+    </LinearLayout>
+
+</LinearLayout>

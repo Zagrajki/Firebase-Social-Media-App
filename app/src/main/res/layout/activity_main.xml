@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/tilEmailMain"
+        android:layout_width="150dp"
+        android:src="@drawable/firebase_logo"
+        android:contentDescription="@string/main_photo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmailMain"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:boxStrokeColor="@color/green_dark"
+        app:hintTextColor="@color/green_dark"
+        app:boxBackgroundColor="@color/gray_light"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="@string/email"
+            android:textCursorDrawable="@xml/cursor"
+            android:id="@+id/tietEmailMain"
+            android:inputType="textEmailAddress"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPasswordMain"
+        android:layout_below="@id/tilEmailMain"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        app:boxStrokeColor="@color/green_dark"
+        app:hintTextColor="@color/green_dark"
+        app:boxBackgroundColor="@color/gray_light"
+        app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietPasswordMain"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:textCursorDrawable="@xml/cursor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignInMain"
+        android:layout_below="@id/tilPasswordMain"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/sign_in"
+        app:backgroundTint="@color/green_dark"
+        android:textColor="@color/white"/>
+
+    <!--TextView: Show dialog to recover password-->
+    <TextView
+        android:id="@+id/tvRecoverPasswordMain"
+        android:layout_below="@id/btnSignInMain"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:text="@string/recover_your_password" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnGoogleSignInMain"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="2dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUpMain"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/gray_dark"
+        app:backgroundTint="@color/white"
+        tools:ignore="RelativeOverlap" />
+</RelativeLayout>

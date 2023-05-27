@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".PostActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@id/lMyComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/postRecyclerView">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:text="@string/comments"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:drawablePadding="3dp"
+                android:padding="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_comment_dark" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/lMyComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/ivCommenterPhoto"
+            android:src="@drawable/ic_person_dark"/>
+
+        <EditText
+            android:id="@+id/etComment"
+            android:background="@color/white"
+            android:hint="@string/your_comment"
+            android:layout_toEndOf="@id/ivCommenterPhoto"
+            android:layout_toStartOf="@id/btnForward"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="5dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btnForward"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_forward"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

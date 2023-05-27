@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/bottom_menu_main"
+        android:title="Main"
+        android:icon="@drawable/ic_house_dark"/>
+    <item android:id="@+id/bottom_menu_your_profile"
+        android:title="My profile"
+        android:icon="@drawable/ic_person_dark"/>
+    <item android:id="@+id/bottom_menu_new_post"
+        android:title="New post"
+        android:icon="@drawable/ic_add_circle_dark"/>
+    <item android:id="@+id/bottom_menu_chat"
+        android:title="Chat"
+        android:icon="@drawable/ic_write_to_dark"/>
+    <item android:id="@+id/bottom_menu_users"
+        android:title="Users"
+        android:icon="@drawable/ic_people_dark"/>
+</menu>

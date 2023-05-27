@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.firebaseappphoto">
+    <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.example.firebaseappphoto.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/firebase_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/firebase_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FirebaseApp2">
+        <activity android:name="com.example.firebaseappphoto.AchievementsActivity" />
+        <activity android:name="com.example.firebaseappphoto.WatchersActivity" />
+        <activity android:name="com.example.firebaseappphoto.WatchingActivity" />
+        <activity android:name="com.example.firebaseappphoto.NotificationsActivity" />
+        <activity android:name="com.example.firebaseappphoto.ProfileOpinionsActivity" />
+        <activity android:name="com.example.firebaseappphoto.RatedByActivity" />
+        <activity android:name="com.example.firebaseappphoto.PostActivity" />
+        <activity android:name="com.example.firebaseappphoto.SomeonesProfileActivity" />
+        <activity android:name="com.example.firebaseappphoto.MessagesActivity"
+            android:theme="@style/ThemeNo.FirebaseApp2" />
+        <activity android:name="com.example.firebaseappphoto.PanelActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.firebaseappphoto.SignUpActivity" />
+        <activity android:name="com.example.firebaseappphoto.MainActivity"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+    </application>
+
+</manifest>
